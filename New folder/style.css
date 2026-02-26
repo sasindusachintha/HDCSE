@@ -1,0 +1,67 @@
+.circle{
+    position: relative;
+    bottom: 0;
+
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+    transform-origin: 50% 66%; /* important */
+    animation: roll 4s linear infinite;
+}
+
+.square{
+    position: relative;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 80px solid green;
+
+    transform-origin: 50% 66%; /* important */
+    animation: roll 4s linear infinite;
+}
+
+
+/*Triagle*/
+.triangle{
+    position: relative;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 80px solid green;
+
+    transform-origin: 50% 66%; /* important */
+    animation: roll 4s linear infinite;
+}
+
+/*animations*/
+@keyframes bounce{
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-30px);}
+    100% {transform: translateY(0);}
+}
+
+@keyframes rotate{
+    form{transform: rotate(0deg);}
+    to[transform: rotate(360deg);]
+}
+
+@keyframes move{
+    from{transform: translateX(0);}
+}
+         
+/* Rolling Animation */
+@keyframes roll{
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    100% {
+        transform: translateX(400px) rotate(360deg);
+    }
+}
