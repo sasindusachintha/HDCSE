@@ -1,43 +1,37 @@
+/*External CSS*/
+
+.Shapes{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px;
+}
+
 .circle{
-    position: relative;
-    bottom: 0;
-
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
     border-radius: 50%;
-
-    transform-origin: 50% 66%; /* important */
-    animation: roll 4s linear infinite;
+    animation: bounce 2s infinite;
 }
 
 .square{
-    position: relative;
-    bottom: 0;
-
-    width: 0;
-    height: 0;
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
-    border-bottom: 80px solid green;
-
-    transform-origin: 50% 66%; /* important */
-    animation: roll 4s linear infinite;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    animation: rotate 3s infinite linear;
 }
 
 
 /*Triagle*/
 .triangle{
-    position: relative;
-    bottom: 0;
-
+    margin: 0;
     width: 0;
     height: 0;
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
-    border-bottom: 80px solid green;
-
-    transform-origin: 50% 66%; /* important */
-    animation: roll 4s linear infinite;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid green;
+    animation: move 2s infinite alternate;
 }
 
 /*animations*/
@@ -49,11 +43,12 @@
 
 @keyframes rotate{
     form{transform: rotate(0deg);}
-    to[transform: rotate(360deg);]
+    to{transform: rotate(360deg);}
 }
 
 @keyframes move{
     from{transform: translateX(0);}
+    to{transform: translateX(60px);}
 }
          
 /* Rolling Animation */
