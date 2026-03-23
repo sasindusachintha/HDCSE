@@ -31,4 +31,4 @@ if(score >= 90){
     grade = "D or F" ;
 }
 
-console.log("your grade is " + grade) ;
+console.log("your grade is " + grade);
