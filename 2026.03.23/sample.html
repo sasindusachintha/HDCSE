@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Array to Table Example</title>
+</head>
+<body>
+
+    <h2>Student List (Using Loops)</h2>
+
+    <table border="1" >
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody id = "tableBody" ></tbody>
+    </table>
+    
+    <script>
+        //Array of students
+        let students = [
+            {id: 1, name: "kamal"},
+            {id: 2, name: "Nimal"},
+            {id: 3, name: "Sunil"},
+            {id: 4, name: "Amal"}
+        ];
+
+        let table = document.getElementById("tableBody");
+
+        //using for loop
+        for(let i = 0 ; i < students.length; i++){
+            let row = "<tr>";
+            row += "<td>" + students[i].id + "</td>";
+            row += "<td>" + students[i].name + "</td>";
+            row += "</tr>" ;
+            
+            table.innerHTML += row;
+        }
+        
+        //Using Whike Loop(add more data)
+        let moreStudents = [
+            {id: 5, name: "Saman"},
+            {id: 6, name: "Ruwan"}
+            
+        ];
+        
+        let j = 0 ;
+        while(j < moreStudents.length) {
+            let row = "<tr>";
+            row += "<td>" + morestudents[j].id + "</td>";
+            row += "<td>" + morestudents[j].name + "</td>";
+            row += "</tr>" ;
+
+            table.innerHTML += row ;
+            j++ ;        
+        }
+
+    </script>
+
+</body>
+</html>
