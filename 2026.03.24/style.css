@@ -7,5 +7,42 @@ body{
 }
 
 .navbar{
-    background-color:aliceblue ;
+    background-color: aliceblue;
+}
+
+.hero{
+    position: relative;
+    overflow: hidden;
+    color: white;
+    padding: 120px 0;
+}
+
+.bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1{
+    font-size: 3rem;
 }
