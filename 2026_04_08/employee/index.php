@@ -54,6 +54,7 @@ if (isset($_GET['success'])) {
         <th>Position</th>
         <th>Salary</th>
         <th>Created At</th>
+        <th>Action</th>
     </tr>
 
 <?php
@@ -65,7 +66,8 @@ while ($row = $result->fetch_assoc()) {
         <td>{$row['position']}</td>
         <td>{$row['salary']}</td>
         <td>{$row['created_at']}</td>
-        <td> <a href='delete.php?id={$row['id']}' class='btn btn-danger'>Delete</a>
+        <td> <a href='delete.php?id={$row['id']}' class='btn btn-danger'
+        onclick='return confirm(\"Are your sure?\")'>Delete</a>
         </td>
     </tr>";
 }
