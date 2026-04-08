@@ -1,9 +1,9 @@
-<?php 
- include 'db.php' ;
+<?php
+include 'db.php';
 
- $id = $_GET['id'];
+$id = $_GET['id'];
 
- $conn->query("DELETE FROM employees WHERE id = $id");
+$conn->query("DELETE FROM employees WHERE id=$id");
 
- header("Location: index.php");
- ?>
+header("Location: index.php");
+?>
