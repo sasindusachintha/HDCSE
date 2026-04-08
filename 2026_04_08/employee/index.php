@@ -39,6 +39,7 @@ if (isset($_GET['success'])) {
     </div>
 
     <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+    
 </form>
 
 <hr>
@@ -64,6 +65,8 @@ while ($row = $result->fetch_assoc()) {
         <td>{$row['position']}</td>
         <td>{$row['salary']}</td>
         <td>{$row['created_at']}</td>
+        <td> <a href='delete.php?id={$row['id']}' class='btn btn-danger'>Delete</a>
+        </td>
     </tr>";
 }
 ?>
