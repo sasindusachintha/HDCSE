@@ -5,14 +5,17 @@ include 'db.php';
 $result = $conn->query("SELECT * FROM employees");
 ?>
 
+// index.php - Main page to display employee records and provide options to add, edit, and delete employees
 <!DOCTYPE html>
 <html>
 <head>
     <title>Employee Management</title>
+    // Include Bootstrap CSS for styling
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="container mt-5">
 
+// Heading for the Employee Management System
 <h2 class="mb-4">Employee Management System</h2>
 
 <!-- Success Messages -->
@@ -64,6 +67,7 @@ if (isset($_GET['deleted'])) {
 <!-- Employee Table -->
 <h4>Employee List</h4>
 
+// Display employee records in a table format with options to edit and delete each record
 <table class="table table-bordered table-striped">
     <tr>
         <th>ID</th>
@@ -165,20 +169,24 @@ if (isset($_GET['deleted'])) {
 </div>
 
 <!-- Bootstrap + Script -->
+ // Include Bootstrap JS for modal functionality and custom script to load data into the edit modal
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-// Load data into modal
+// Add click event listeners to all edit buttons to populate the edit form with the corresponding employee data and show the modal
 document.querySelectorAll('.editBtn').forEach(button => {
     button.addEventListener('click', function() {
 
+    // Populate the edit form fields with data attributes from the clicked button
         document.getElementById('edit_id').value = this.dataset.id;
         document.getElementById('edit_name').value = this.dataset.name;
         document.getElementById('edit_email').value = this.dataset.email;
         document.getElementById('edit_position').value = this.dataset.position;
         document.getElementById('edit_salary').value = this.dataset.salary;
 
+        // Show the edit modal
         var modal = new bootstrap.Modal(document.getElementById('editModal'));
+        // Display the modal to the user
         modal.show();
     });
 });
