@@ -32,7 +32,7 @@ if (isset($_GET['deleted'])) {
 <div class="card p-4 mb-4">
     <h4>Add Employee</h4>
 
-    <form method="POST" action="insert.php">
+    <form method="POST" action="./insert.php">
 
         <div class="mb-3">
             <label>Name</label>

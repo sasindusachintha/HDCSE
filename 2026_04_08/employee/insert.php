@@ -1,5 +1,8 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 include 'db.php';
 
 if(isset($_POST['submit'])){
@@ -9,21 +12,15 @@ if(isset($_POST['submit'])){
     $position = $_POST['position'];
     $salary = $_POST['salary'];
 
-    //prepared statement
     $stmt = $conn->prepare("INSERT INTO employees (name,email,position,salary) VALUES (?,?,?,?)");
-    $stmt->bind_param("sssd",$name,$email,$position,$salary);
+
+    $stmt->bind_param("ssss", $name, $email, $position, $salary);
 
     if ($stmt->execute()) {
         header("Location: index.php?success=1");
+        exit();
     } else {
-        echo "Error: " . $conn->error;
+        echo "Error: " . $stmt->error;
     }
-
 }
-
-
-
-
-
-
 ?>
