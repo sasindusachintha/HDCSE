@@ -13,6 +13,7 @@
             align-items: center;
             min-height: 100vh;
         }
+        
         .form-container {
             background: white;
             padding: 2rem;
