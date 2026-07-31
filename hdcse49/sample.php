@@ -27,6 +27,7 @@
             border: none;
             color: white;
             transition: background 0.3s ease;
+            
         }
         .submit-btn:hover {
             background: linear-gradient(90deg, #ff6f91, #6b48ff);
