@@ -21,6 +21,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             max-width: 600px;
         }
+        
         .submit-btn {
             background: linear-gradient(90deg, #6b48ff, #ff6f91);
             border: none;
