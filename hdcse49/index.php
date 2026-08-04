@@ -33,7 +33,7 @@
 </head>
 <body>
     <div class="form-container">
-        <h2 class="text-center mb-4">Employee Details Form</h2>
+        <h2 class="text-center mb-4">Employee Detail Form</h2>
         <form action="insert_employee.php" method="POST" id="employeeForm">
             <div class="mb-3">
                 <label for="name" class="form-label fw-bold">Full Name</label>
