@@ -56,7 +56,7 @@
                 <input type="time" class="form-control" id="shift-time" name="shift-time" required>
             </div>
             <div class="mb-3">
-                <label for="employee-id" class="form-label fw-bold">Employee ID (Number)</label>
+                <label for="employee-id" class="form-label fw-bold">Employee ID(Number)</label>
                 <input type="number" class="form-control" id="employee-id" name="employee-id" placeholder="Enter employee ID" required>
             </div>
             <div class="mb-3">
