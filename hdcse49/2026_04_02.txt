@@ -7,7 +7,7 @@ CREATE TABLE employees (
     phone_number VARCHAR(20),
     hire_date DATE NOT NULL,
     job_title VARCHAR(50),
-    salary DECIMAL(10,2),
+    salary DECIMAL(11,2),
     department VARCHAR(50),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
