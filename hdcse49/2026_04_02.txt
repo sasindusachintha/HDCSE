@@ -4,7 +4,7 @@ CREATE TABLE employees (
     first_name VARCHAR(60) NOT NULL,
     last_name VARCHAR(60) NOT NULL,
     email VARCHAR(100) UNIQUE,
-    phone_number VARCHAR(20),
+    phone_number VARCHAR(10),
     hire_date DATE NOT NULL,
     job_title VARCHAR(50),
     salary DECIMAL(11,2),
